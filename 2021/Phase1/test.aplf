@@ -24,4 +24,3 @@
  ⎕FX fn ⍝ Construct the function
  ⍞←' '
  ⍎'test_ ⍬'
- 
