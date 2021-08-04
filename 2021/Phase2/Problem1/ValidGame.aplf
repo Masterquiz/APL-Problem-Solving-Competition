@@ -24,3 +24,5 @@
      Assert 0 1 0 1 1≡ValidGame¨20 20 20 21 12⍴¨'6' '9-' '64' '9/' 'X':
      'Test passed'
  }
+ 
+ 
