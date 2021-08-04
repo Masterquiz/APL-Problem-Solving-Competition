@@ -1,0 +1,12 @@
+BowlingScore←{
+ ⍝ Boolean to calculate bonus
+     spare←⍵='/'
+     strike←¯1⌽⍵='X'
+ ⍝ Format input: '-'→'0', '[/X]'→':'. Use ⎕UCS to easily convert '[/X]' into 10
+     game←¯48+⎕UCS':'⍨¨@(∊∘'/X')⊢'-'⎕R'0'⊢⍵
+     game←game-spare×¯1⌽game            ⍝ Convert spares: 8/→8 10→8 2
+     bspare←spare×1⌽game                ⍝ Bonus spare
+     bstrike←1⌽strike×0,⍨2+/game×strike∨¯1⌽strike ⍝ Bonus strike
+     bonuses←∊0,¨@(⍸strike)⊢bstrike+bspare+game ⍝ Sum game and bonuses. Add 0s at strike for final score
+     +\+/10 2⍴bonuses
+ }
