@@ -1,7 +1,18 @@
+ 
  sseq←{
      pos←⌽0,⍸¨↓⍵∘.=⍺,⍬                  ⍝ Position of each letters of ⍵ in ⍺
      ⍝ Iterate over pos to take always the lowest value possible ←→ smallest of numbers bigger than the previous
      vec←1↓⊃{⍵,⊃⍺/⍨⍺>⊃⌽⍵}/pos
      ctrl←~0∊vec
      ctrl,⍥⊂ctrl/vec
+ }
+ 
+ sseqTest←{
+     Assert←{⍺←'Test failed' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}
+     Assert(⊂1)(3 4 5)≡'ACGTACGTGACG'sseq'GTA':
+     Assert(0)(⍬)≡'ACGTACGTGACG'sseq'TTT':
+     Assert(1)(⍬)≡'ACGTACGTGACG'sseq'':
+     Assert(0)(⍬)≡''sseq'TTT':
+     Assert(1)(1⍴1)≡'T'sseq'T':
+     'Test passed'
  }
