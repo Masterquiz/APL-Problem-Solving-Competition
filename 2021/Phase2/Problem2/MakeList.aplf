@@ -1,0 +1,7 @@
+ MakeList←{
+     step←{(⊃⍵)-0,(××⍳∘|)-/⍵}
+     ∊{inp←⍵⊆⍨~2>/0,⍵∊⎕D                ⍝ Divide at separator '-', keeping
+         nums←1↓⍎¨'0',inp               ⍝ Format string(s)
+         step 2⍴nums
+     }¨','(≠⊆⊢),⍵                       ⍝ Divide at ','
+ }

@@ -1,0 +1,13 @@
+ lcsq←{
+     ⍝ Construct the matrix
+     M←↑⊃{⍵,⊂⌈\last⌈(⍺+0,¯1↓last←⊃⌽⍵)⌈0,¯1↓⍺}/(⊂⊂{0}¨⍵),⍨⌽↓⍺∘.=⍵
+     ⍝ Keep only numbers at the vertices
+     mat←2<⌿2</0,M
+     ⍝ pos: Grouping 1s in mat based on their value in M
+     ⍝ Much faster than {(⍸⍵∘=)¨⍳⌈/,⍵}mat×1↓M
+     pos←(⍸mat){⍵[⍋⍵]⊆⍺[⍋⍵]}mat/⍥,1↓M
+     ⍝ Take each time a position up-left than the last one
+     ⍝ Similar to sseq
+     ind←1↓¨{⍵,¯1↑⍺/⍨∧/¨⍺<¯1↑⍵}/pos,⊂⊂⍴M
+     ⌽⍺⌷⍨⊃¨¨ind
+ }

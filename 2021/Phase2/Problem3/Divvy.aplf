@@ -1,0 +1,3 @@
+ Divvy←{vec←⍵⊂⍨⌽(⍳≢⍵)∊⌊(⍳⍺)×⍺÷⍨≢⍵
+     vec,(⍺-⍴vec)/⊂⍬                    ⍝ Add remaining empty item
+ }

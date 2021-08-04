@@ -1,0 +1,7 @@
+ ValidBoard←{
+     size fleet board←⍺⍺ ⍵⍵ ⍵
+     pos←⍸¨board∘=¨⍳⌈/0,,board          ⍝ Positions of each ship
+     res←size≡⍴board                    ⍝ Check size
+     res,←fleet≡≢¨pos                   ⍝ Check on fleet, number and length
+     ∧/res,1=∊{+/¨|1↓2-/⍵,⍨⊂0 1}¨pos↑⍨≢fleet ⍝ Ship in contiguous cells (Without extra ships)
+ }
