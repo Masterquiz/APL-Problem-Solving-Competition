@@ -1,4 +1,3 @@
-
  ValidGame←{
      game←'X'⎕R'-X'⊢,⍵
      play bonus←20(↑,⍥⊂↓)game           ⍝ Divide play and bonus rolls
