@@ -1,5 +1,4 @@
-
-ValidBoard2←{
+ ValidBoard2←{
      size fleet board←⍺⍺ ⍵⍵ ⍵
      ⍝ Basic controls
      pos←⍸¨board∘=¨⍳⌈/0,,board          ⍝ Positions of each ship
