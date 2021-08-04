@@ -1,1 +1,8 @@
  lexv←{(,⍵∘.,(⊂⍬),⊢)⍣⍺⊢⍬}
+
+ lexvTest←{
+     Assert←{⍺←'Test failed' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}
+     Assert((1⊂'D'),'DD' 'DDD' 'DDN' 'DDA' 'DN' 'DND' 'DNN' 'DNA' 'DA' 'DAD' 'DAN' 'DAA',(1⊂'N'),'ND' 'NDD' 'NDN' 'NDA' 'NN' 'NND' 'NNN' 'NNA' 'NA' 'NAD' 'NAN' 'NAA',(1⊂'A'),'AD' 'ADD' 'ADN' 'ADA' 'AN' 'AND' 'ANN' 'ANA' 'AA' 'AAD' 'AAN' 'AAA')≡3 lexv'DNA':
+     Assert(1⊂'D' 'Y' 'A' 'L' 'O' 'G')≡1 lexv'DYALOG':
+     'Test passed'
+ }
