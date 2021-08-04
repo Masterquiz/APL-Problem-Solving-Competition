@@ -1,6 +1,0 @@
- MinMax←{
-     bool←2≠/(⊢,⍨1+⊃)⍵                  ⍝ Boolean vector to delete duplicates elements
-     ind←bool⊂⍳≢⍵
-     val←bool/⍵
-     (+/÷≢)¨ind/⍨2≠/(⊃∘⌽,⍨⊃,⊢)¯1↓×2-/1,⍨val ⍝ Take local minima and maxima; do the mean of each subvector
- }
