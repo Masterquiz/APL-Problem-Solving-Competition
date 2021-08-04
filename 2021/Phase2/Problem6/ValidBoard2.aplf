@@ -8,3 +8,14 @@ ValidBoard2←{
      res,←∊{∨/∧/(1 1)(1 0)(0 1)∘.≡|1↓2-/⍵,⍨⊂0 1}¨pos↑⍨≢fleet ⍝ Ship in contiguous cells (Without extra ships)
      ∧/res,∊(⌽≢⊢)¨2⍪⌿2,/board
  }
+
+ ValidBoard2Test←{
+     Assert←{⍺←'Test failed' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}
+     Assert 1=3 3 ValidBoard2 2 3 2 1⊢3 3⍴2 2 2 1 3 3 0 1 4:
+     Assert 1=3 3 ValidBoard2 1 2 3 2 1⊢3 3⍴1 2 3 2 3 4 3 4 5:
+     Assert 1=3 3 ValidBoard2 3 2 2⊢3 3⍴1 1 1 0 2 0 2 3 3:
+     Assert 0=2 2 ValidBoard2 2 2⊢2 2⍴1 2 2 1:
+     Assert 1=0 0 ValidBoard2 ⍬⊢0 0⍴0:
+     'Test passed'
+ }
+ 
