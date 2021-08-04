@@ -8,5 +8,5 @@ My solutions to APL Problem Solving Solutions
     - [X] Phase 1
     - [X] Phase 2
   - 2020
-    - [X] Phase 1 (Work In Progress)
+    - [X] Phase 1 (Work in progress)
     - [ ] Phase 2
