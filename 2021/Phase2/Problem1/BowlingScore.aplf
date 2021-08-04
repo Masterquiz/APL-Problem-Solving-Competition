@@ -1,4 +1,3 @@
-
  BowlingScore←{
  ⍝ Boolean to calculate bonus
      spare←⍵='/'
