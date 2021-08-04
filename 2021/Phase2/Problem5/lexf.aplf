@@ -1,1 +1,11 @@
  lexf←{(,⍵∘.,⊢)⍣⍺⊢⊂⍬}
+
+ lexfTest←{
+     Assert←{⍺←'Test failed' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}
+     Assert'AAA' 'AAP' 'AAL' 'APA' 'APP' 'APL' 'ALA' 'ALP' 'ALL' 'PAA' 'PAP' 'PAL' 'PPA' 'PPP' 'PPL' 'PLA' 'PLP' 'PLL' 'LAA' 'LAP' 'LAL' 'LPA' 'LPP' 'LPL' 'LLA' 'LLP' 'LLL'≡3 lexf'APL':
+     Assert(0⍴⊆'   ')≡3 lexf'':
+     Assert(1⍴⊂3⍴'QQQ')≡3 lexf'Q':
+     Assert(⊂⍬)≡0 lexf'DNA':
+     Assert(1⊂'D' 'Y' 'A' 'L' 'O' 'G')≡1 lexf'DYALOG':
+     'Test passed'
+ }
