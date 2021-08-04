@@ -1,4 +1,4 @@
-BowlingScore←{
+ BowlingScore←{
  ⍝ Boolean to calculate bonus
      spare←⍵='/'
      strike←¯1⌽⍵='X'
@@ -9,4 +9,12 @@ BowlingScore←{
      bstrike←1⌽strike×0,⍨2+/game×strike∨¯1⌽strike ⍝ Bonus strike
      bonuses←∊0,¨@(⍸strike)⊢bstrike+bspare+game ⍝ Sum game and bonuses. Add 0s at strike for final score
      +\+/10 2⍴bonuses
+ }
+ 
+ BowlingScoreTest←{
+     Assert←{⍺←'Test failed' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}
+     Assert 8 17 24 43 52 82 108 127 136 153≡BowlingScore'6272348/9-XXX638/7':
+     Assert 0 0 0 0 0 0 0 0 0 0≡BowlingScore'--------------------':
+     Assert 30 60 90 120 150 180 210 240 270 300≡BowlingScore'XXXXXXXXXXXX':
+     'Test passed'
  }
