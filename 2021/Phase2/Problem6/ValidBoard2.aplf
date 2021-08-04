@@ -18,4 +18,3 @@
      Assert 1=0 0 ValidBoard2 ⍬⊢0 0⍴0:
      'Test passed'
  }
- 
