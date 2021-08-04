@@ -4,3 +4,13 @@
      val←bool/⍵
      (+/÷≢)¨ind/⍨2≠/(⊃∘⌽,⍨⊃,⊢)¯1↓×2-/1,⍨val ⍝ Take local minima and maxima; do the mean of each subvector
  }
+
+ MinMaxTest←{
+     Assert←{⍺←'Test failed' ⋄ 0∊⍵:⍺ ⎕SIGNAL 8 ⋄ shy←0}
+     Assert 2 3 4 6.5 8 12≡MinMax 3 1 4 1 5 9 9 2 6 6 6 8 5:
+     Assert ⍬≡MinMax ⍬:
+     Assert ⍬≡MinMax 12:
+     Assert ⍬≡MinMax 3 3 3:
+     Assert 2 3≡MinMax 1 3 2 4:
+     'Test passed'
+ }
