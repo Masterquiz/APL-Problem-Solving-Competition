@@ -8,7 +8,7 @@ Older competition's problems can be found [here](https://problems.tryapl.org/) <
   
   - 2021
     - [X] Phase 1
-    - [X] Phase 2
+    - [X] Phase 2 + Tests function
   - 2020
     - [X] Phase 1 (Work in progress)
     - [ ] Phase 2
