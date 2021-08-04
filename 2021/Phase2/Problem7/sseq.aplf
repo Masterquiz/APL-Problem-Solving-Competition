@@ -1,4 +1,3 @@
- 
  sseq←{
      pos←⌽0,⍸¨↓⍵∘.=⍺,⍬                  ⍝ Position of each letters of ⍵ in ⍺
      ⍝ Iterate over pos to take always the lowest value possible ←→ smallest of numbers bigger than the previous
