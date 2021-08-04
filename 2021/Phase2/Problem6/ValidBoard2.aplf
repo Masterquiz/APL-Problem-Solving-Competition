@@ -1,3 +1,4 @@
+
 ValidBoard2←{
      size fleet board←⍺⍺ ⍵⍵ ⍵
      ⍝ Basic controls
