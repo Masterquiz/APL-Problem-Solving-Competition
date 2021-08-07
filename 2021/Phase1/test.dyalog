@@ -1,4 +1,4 @@
- d test name;inps;outs;fn;i;out;linps;r;adj
+d test name;inps;outs;fn;i;out;linps;r;adj
  ⍝ name: Function name
  ⍝ d: Is the function dyadic?
 
