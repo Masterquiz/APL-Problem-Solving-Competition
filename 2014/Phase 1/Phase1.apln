@@ -1,0 +1,14 @@
+:Namespace Phase1
+
+    p01 ← =⍥(1⊥*∘2)
+    p02 ← ⍬
+    p03 ← ⍬
+    p04 ← ⍬
+    p05 ← ⍬ 
+    p06 ← ⍬
+    p07 ← ⍬
+    p08 ← ⍬
+    p09 ← ⍬
+    p10 ← ⍬
+
+:EndNamespace
